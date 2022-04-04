@@ -79,18 +79,22 @@ Alternatively, you can also run the shell script provided in the tear_down_scrip
    - check if quantity is less than 0 - PASS
    - check the range of sales. Was between 2018 and 2020 which seems to be sane values - PASS
    - check if orderid is unique - PASS
+   - duplicate primary key - PASS
 
 2. Products
    - check if price is less than 0 - PASS 
-   - check if price is equal to 0 - FAIL (48 products) (Ask Chad: Do I need to delete the sales records corresponding to this product?)
+   - check if price is equal to 0 - FAIL (48 products) (Chad clarification: Do not filter this)
    - null check for all cols - PASS
    - check if all names are unique and flag if requried. - PASS
+   - duplicate primary key - PASS
 
 3. Employee
    - null check for firstname, lastname and region - PASS
+   - duplicate primary key - PASS
    
 4. Customers
    - null check for firstname, lastname and region - PASS
+   - duplicate primary key - FAIL (1 duplicate - 17829)
  
 5. Join check:
    - check if sales has any invalid foreign key - PASS
